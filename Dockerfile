@@ -6,15 +6,6 @@ ENV 		NPM_VERSION 3.4.0
 # Setting the working directory
 WORKDIR 	/src
 
-# verify gpg and sha256: http://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc
-RUN 		set -ex \
-			&& for key in \
-				7937DFD2AB06298B2293C3187D33FF9D0246406D \
-				114F43EE0176B71C7BC219DD50A3051F888C628D \
-			; do \
-				gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
-			done
-
 # Install Node.js and other dependencies
 RUN 		apt-get update \ 
 			&& apt-get -y install curl \
