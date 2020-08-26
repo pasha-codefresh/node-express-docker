@@ -10,7 +10,7 @@ Make sure that, you have installed Docker on your machine before proceeding.
 * Build the Image
 Navigate to the project folder and execute below command
 ```
-docker build -t <your username>/node-express-docker .
+docker build -t <your username>/node-express-docker .\
 ```
 * Start your Docker image. 
 ```
